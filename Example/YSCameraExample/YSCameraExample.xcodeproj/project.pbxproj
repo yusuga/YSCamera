@@ -1,0 +1,445 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		241A02BA1F12BB5CC9724E0C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A451DCBC8C5BC456B4AB5DD9 /* libPods.a */; };
+		B87815901C2311F200141188 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B878158F1C2311F200141188 /* main.m */; };
+		B87815931C2311F200141188 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B87815921C2311F200141188 /* AppDelegate.m */; };
+		B87815991C2311F200141188 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B87815971C2311F200141188 /* Main.storyboard */; };
+		B878159B1C2311F200141188 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B878159A1C2311F200141188 /* Assets.xcassets */; };
+		B878159E1C2311F200141188 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B878159C1C2311F200141188 /* LaunchScreen.storyboard */; };
+		B87815A81C23120D00141188 /* YSCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = B87815A71C23120D00141188 /* YSCamera.m */; };
+		B87815AC1C23156F00141188 /* UIImagePickerController+YSCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = B87815AB1C23156F00141188 /* UIImagePickerController+YSCamera.m */; };
+		B87815B21C23186100141188 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B87815B11C23186100141188 /* TableViewController.m */; };
+		B87815B61C23AA3700141188 /* YSCameraLocalization.m in Sources */ = {isa = PBXBuildFile; fileRef = B87815B51C23AA3700141188 /* YSCameraLocalization.m */; };
+		B87815B91C23AA8300141188 /* YSCameraLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B87815BB1C23AA8300141188 /* YSCameraLocalizable.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		661ADB352CE41B8E3E765D3E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		7A5052179546EFEC323EF2CE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A451DCBC8C5BC456B4AB5DD9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B878158B1C2311F200141188 /* YSCameraExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YSCameraExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B878158F1C2311F200141188 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B87815911C2311F200141188 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B87815921C2311F200141188 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B87815981C2311F200141188 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B878159A1C2311F200141188 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B878159D1C2311F200141188 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B878159F1C2311F200141188 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B87815A61C23120D00141188 /* YSCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSCamera.h; sourceTree = "<group>"; };
+		B87815A71C23120D00141188 /* YSCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSCamera.m; sourceTree = "<group>"; };
+		B87815AA1C23156F00141188 /* UIImagePickerController+YSCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImagePickerController+YSCamera.h"; sourceTree = "<group>"; };
+		B87815AB1C23156F00141188 /* UIImagePickerController+YSCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImagePickerController+YSCamera.m"; sourceTree = "<group>"; };
+		B87815B01C23186100141188 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		B87815B11C23186100141188 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		B87815B41C23AA3700141188 /* YSCameraLocalization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSCameraLocalization.h; sourceTree = "<group>"; };
+		B87815B51C23AA3700141188 /* YSCameraLocalization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSCameraLocalization.m; sourceTree = "<group>"; };
+		B87815BA1C23AA8300141188 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/YSCameraLocalizable.strings; sourceTree = "<group>"; };
+		B87815BC1C23AA9000141188 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/YSCameraLocalizable.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B87815881C2311F200141188 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				241A02BA1F12BB5CC9724E0C /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2556C4AF3D501E8EC1BCD8A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A451DCBC8C5BC456B4AB5DD9 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B87815821C2311F200141188 = {
+			isa = PBXGroup;
+			children = (
+				B878158D1C2311F200141188 /* YSCameraExample */,
+				B87815A51C2311FF00141188 /* YSCamera */,
+				B878158C1C2311F200141188 /* Products */,
+				B98F9A8F7D551409636CB6DC /* Pods */,
+				2556C4AF3D501E8EC1BCD8A4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B878158C1C2311F200141188 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B878158B1C2311F200141188 /* YSCameraExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B878158D1C2311F200141188 /* YSCameraExample */ = {
+			isa = PBXGroup;
+			children = (
+				B87815911C2311F200141188 /* AppDelegate.h */,
+				B87815921C2311F200141188 /* AppDelegate.m */,
+				B87815971C2311F200141188 /* Main.storyboard */,
+				B87815B01C23186100141188 /* TableViewController.h */,
+				B87815B11C23186100141188 /* TableViewController.m */,
+				B878159A1C2311F200141188 /* Assets.xcassets */,
+				B878159C1C2311F200141188 /* LaunchScreen.storyboard */,
+				B878159F1C2311F200141188 /* Info.plist */,
+				B878158E1C2311F200141188 /* Supporting Files */,
+			);
+			path = YSCameraExample;
+			sourceTree = "<group>";
+		};
+		B878158E1C2311F200141188 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B878158F1C2311F200141188 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B87815A51C2311FF00141188 /* YSCamera */ = {
+			isa = PBXGroup;
+			children = (
+				B87815A61C23120D00141188 /* YSCamera.h */,
+				B87815A71C23120D00141188 /* YSCamera.m */,
+				B87815A91C23136E00141188 /* Category */,
+				B87815B31C23A99200141188 /* Localization */,
+			);
+			name = YSCamera;
+			path = ../../Classes/YSCamera;
+			sourceTree = "<group>";
+		};
+		B87815A91C23136E00141188 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				B87815AA1C23156F00141188 /* UIImagePickerController+YSCamera.h */,
+				B87815AB1C23156F00141188 /* UIImagePickerController+YSCamera.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		B87815B31C23A99200141188 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				B87815B41C23AA3700141188 /* YSCameraLocalization.h */,
+				B87815B51C23AA3700141188 /* YSCameraLocalization.m */,
+				B87815BB1C23AA8300141188 /* YSCameraLocalizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		B98F9A8F7D551409636CB6DC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				661ADB352CE41B8E3E765D3E /* Pods.debug.xcconfig */,
+				7A5052179546EFEC323EF2CE /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B878158A1C2311F200141188 /* YSCameraExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B87815A21C2311F200141188 /* Build configuration list for PBXNativeTarget "YSCameraExample" */;
+			buildPhases = (
+				FAC52FFA59FDAFD77B6A58C7 /* Check Pods Manifest.lock */,
+				B87815871C2311F200141188 /* Sources */,
+				B87815881C2311F200141188 /* Frameworks */,
+				B87815891C2311F200141188 /* Resources */,
+				F5D91563D8F91A8CF341C963 /* Embed Pods Frameworks */,
+				89CE6C444163D96CAC4C2BFB /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YSCameraExample;
+			productName = YSCameraExample;
+			productReference = B878158B1C2311F200141188 /* YSCameraExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B87815831C2311F200141188 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Yu Sugawara";
+				TargetAttributes = {
+					B878158A1C2311F200141188 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = B87815861C2311F200141188 /* Build configuration list for PBXProject "YSCameraExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ja,
+			);
+			mainGroup = B87815821C2311F200141188;
+			productRefGroup = B878158C1C2311F200141188 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B878158A1C2311F200141188 /* YSCameraExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B87815891C2311F200141188 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B878159E1C2311F200141188 /* LaunchScreen.storyboard in Resources */,
+				B878159B1C2311F200141188 /* Assets.xcassets in Resources */,
+				B87815B91C23AA8300141188 /* YSCameraLocalizable.strings in Resources */,
+				B87815991C2311F200141188 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		89CE6C444163D96CAC4C2BFB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5D91563D8F91A8CF341C963 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAC52FFA59FDAFD77B6A58C7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B87815871C2311F200141188 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B87815931C2311F200141188 /* AppDelegate.m in Sources */,
+				B87815A81C23120D00141188 /* YSCamera.m in Sources */,
+				B87815901C2311F200141188 /* main.m in Sources */,
+				B87815B21C23186100141188 /* TableViewController.m in Sources */,
+				B87815AC1C23156F00141188 /* UIImagePickerController+YSCamera.m in Sources */,
+				B87815B61C23AA3700141188 /* YSCameraLocalization.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B87815971C2311F200141188 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B87815981C2311F200141188 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B878159C1C2311F200141188 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B878159D1C2311F200141188 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B87815BB1C23AA8300141188 /* YSCameraLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B87815BA1C23AA8300141188 /* Base */,
+				B87815BC1C23AA9000141188 /* ja */,
+			);
+			name = YSCameraLocalizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B87815A01C2311F200141188 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B87815A11C2311F200141188 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B87815A31C2311F200141188 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 661ADB352CE41B8E3E765D3E /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = YSCameraExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yusuga.YSCameraExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B87815A41C2311F200141188 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A5052179546EFEC323EF2CE /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = YSCameraExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yusuga.YSCameraExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B87815861C2311F200141188 /* Build configuration list for PBXProject "YSCameraExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B87815A01C2311F200141188 /* Debug */,
+				B87815A11C2311F200141188 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B87815A21C2311F200141188 /* Build configuration list for PBXNativeTarget "YSCameraExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B87815A31C2311F200141188 /* Debug */,
+				B87815A41C2311F200141188 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B87815831C2311F200141188 /* Project object */;
+}
