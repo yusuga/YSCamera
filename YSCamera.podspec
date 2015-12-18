@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'YSCamera'
-  s.version = '0.0.1'
+  s.version = '0.0.2'
   s.summary = 'Simple Camera Using UIImagePickerController.'
   s.homepage = 'https://github.com/yusuga/YSCamera'
   s.license = 'MIT'
