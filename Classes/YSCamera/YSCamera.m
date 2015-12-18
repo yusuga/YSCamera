@@ -14,7 +14,9 @@
 @interface YSCamera () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic, weak) UIImagePickerController *imagePickerController;
-@property (copy, nonatomic) YSCameraDidSaveCompletion didSaveCompletion;
+
+@property (nonatomic, weak, readwrite) id<YSCameraDelegate> delegate;
+@property (nonatomic, copy) YSCameraDidSaveCompletion didSaveCompletion;
 
 @end
 
@@ -25,7 +27,33 @@
                           configuration:(YSCameraConfiguration)configuration
                       didSaveCompletion:(YSCameraDidSaveCompletion)didSaveCompletion
 {
+    [self presentCameraFromViewController:parentVC
+                      videoCaptureAllowed:videoCaptureAllowed
+                            configuration:configuration
+                        didSaveCompletion:didSaveCompletion
+                                 delegate:nil];
+}
+
++ (void)presentCameraFromViewController:(UIViewController *)parentVC
+                    videoCaptureAllowed:(BOOL)videoCaptureAllowed
+                          configuration:(YSCameraConfiguration)configuration
+                               delegate:(id<YSCameraDelegate>)delegate
+{
+    [self presentCameraFromViewController:parentVC
+                      videoCaptureAllowed:videoCaptureAllowed
+                            configuration:configuration
+                        didSaveCompletion:nil
+                                 delegate:delegate];
+}
+
++ (void)presentCameraFromViewController:(UIViewController *)parentVC
+                    videoCaptureAllowed:(BOOL)videoCaptureAllowed
+                          configuration:(YSCameraConfiguration)configuration
+                      didSaveCompletion:(YSCameraDidSaveCompletion)didSaveCompletion
+                               delegate:(id<YSCameraDelegate>)delegate
+{
     NSParameterAssert([NSThread isMainThread]);
+    NSParameterAssert(!(didSaveCompletion && delegate));
     
     if (![self isAvailable]) {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:YSCameraLocalizedString(@"Camera is not available")
@@ -41,13 +69,14 @@
     
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     
-    YSCamera *delegate = [[YSCamera alloc] init];
-    delegate.imagePickerController = picker;
-    delegate.didSaveCompletion = didSaveCompletion;
+    YSCamera *camera = [[YSCamera alloc] init];
+    camera.delegate = delegate;
+    camera.imagePickerController = picker;
+    camera.didSaveCompletion = didSaveCompletion;
     
-    [picker ys_setCamera:delegate];
+    [picker ys_setCamera:camera];
     
-    picker.delegate = delegate;
+    picker.delegate = camera;
     picker.sourceType = UIImagePickerControllerSourceTypeCamera;
     if (videoCaptureAllowed) {
         picker.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeCamera];
@@ -74,10 +103,24 @@
                                          animated:YES];
         
     };
+    void (^dismissHUD)() = ^{
+        [MRProgressOverlayView dismissOverlayForView:picker.view
+                                            animated:YES];
+    };
     
     UIImage *image = info[UIImagePickerControllerEditedImage] ?: info[UIImagePickerControllerOriginalImage];
     if (image) {
         showHUD();
+        
+        if (self.delegate) {
+            __weak typeof(self) wself = self;
+            [self.delegate camera:self didFinishPickingImage:image mediaInfo:info completion:^{
+                dismissHUD();
+                [wself dismiss];
+            }];
+            return;
+        }
+        
         UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), (__bridge_retained void * _Nullable)info);
         return;
     }
@@ -85,6 +128,16 @@
     NSURL *URL = info[UIImagePickerControllerMediaURL];
     if (URL) {
         showHUD();
+        
+        if (self.delegate) {
+            __weak typeof(self) wself = self;
+            [self.delegate camera:self didFinishPickingVideoURL:URL mediaInfo:info completion:^{
+                dismissHUD();
+                [wself dismiss];
+            }];
+            return;
+        }
+        
         UISaveVideoAtPathToSavedPhotosAlbum(URL.path, self, @selector(video:didFinishSavingWithError:contextInfo:), (__bridge_retained void * _Nullable)(info));
         return;
     }

@@ -9,7 +9,7 @@
 #import "TableViewController.h"
 #import "YSCamera.h"
 
-@interface TableViewController ()
+@interface TableViewController () <YSCameraDelegate>
 
 @end
 
@@ -55,10 +55,28 @@
                                             imagePickerController.allowsEditing = YES;
                                         } didSaveCompletion:completion];
             break;
+        case 3:
+            [YSCamera presentCameraFromViewController:self
+                                  videoCaptureAllowed:YES
+                                        configuration:nil
+                                             delegate:self];
+            break;
         default:
+            NSAssert(false, @"Unsupported");
             break;
     }
 }
 
+- (void)camera:(YSCamera *)camera didFinishPickingImage:(UIImage *)image mediaInfo:(NSDictionary<NSString *,id> *)mediaInfo completion:(void (^)(void))completion
+{
+    NSLog(@"%s, mediaInfo: %@", __func__, mediaInfo);
+    completion();
+}
+
+- (void)camera:(YSCamera *)camera didFinishPickingVideoURL:(NSURL *)videoURL mediaInfo:(NSDictionary<NSString *,id> *)mediaInfo completion:(void (^)(void))completion
+{
+    NSLog(@"%s, mediaInfo: %@", __func__, mediaInfo);
+    completion();
+}
 
 @end
